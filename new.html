@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Dropdown Form Modal</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="img2.png" class="img-fluid" height="150" width="150">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-success mx-4" aria-current="page" href="#" id="size" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#formModal">Aluminium Alloys</button></li>
+                <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#formModal">Ores and Minerals</button></li>
+                <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#formModal">Gypsum</button></li>
+                <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#formModal">Magnesium Metal</button></li>
+                <!-- Add more items as needed -->
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success mx-4" href="project.html" id="size">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success mx-4" href="contact.html" id="size">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success mx-4" href="gallery.html" id="size">Gallery</a>
+            </li>
+          </ul>
+          <form class="d-flex my-4">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button" id="searchButton">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Modal for Form -->
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Product Inquiry Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/submit-form" method="POST">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="product" class="form-label">Product</label>
+              <input type="text" class="form-control" id="product" name="product" required>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

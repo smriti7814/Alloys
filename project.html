@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <style>
+      .highlighted-text {
+            background-color: red;/* Background color when matched */
+            color: black; /* Text color when matched */
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+     #size{
+      font-size: 20px;
+     }
+     .dropdown-menu {
+    margin-left: 200px!important;
+    background-color: #198754!important;
+}
+  </style>
+  <body>
+ <!--navbar-->
+ <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="img2.png" class="img-fluid" height="150" width="150">
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-success mx-4" aria-current="page" href="#" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px;">Products</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><button class="dropdown-item" type="button">Aluminium Alloys</button></li>
+              <li><button class="dropdown-item" type="button">Ores and Minerals</button></li>
+              <li><button class="dropdown-item" type="button">Gypsum</button></li>
+              <li><button class="dropdown-item" type="button">Magnesium Metal</button></li>
+              <li><button class="dropdown-item" type="button">Manganese</button></li>
+              <li><button class="dropdown-item" type="button">Zinc Ingots</button></li>
+              <li><button class="dropdown-item" type="button">Zinc Metal powder</button></li>
+              <li><button class="dropdown-item" type="button">Refractory Materials</button></li>
+              <li><button class="dropdown-item" type="button">GGBS</button></li>
+              <li><button class="dropdown-item" type="button">Unbleached Woodpulp</button></li>
+              <li><button class="dropdown-item" type="button">Calcined Bauxite</button></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success mx-4" href="project.html" id="size">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success mx-4" href="contact.html" id="size">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success mx-4" href="gallery.html" id="size">Gallery</a>
+          </li>
+        </ul>
+        <form class="d-flex my-4">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="button" id="searchButton">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Modal for Form -->
+<div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="formModalLabel">Product Inquiry Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/query-form" method="POST"  id="inquiry">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+          </div>
+          <div class="mb-3">
+            <label for="product" class="form-label">Product</label>
+            <input type="text" class="form-control" id="product" name="product" required>
+          </div>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--second-->
+<div class="container-fluid" style="margin-top:200px;">
+  <div class="row">
+    <div class="col-md-12">
+    <h1 class="text-center">Gallery</h1>
+  </div>
+  </div>
+</div>
+  <div class="container-fluid">
+  <div class="row my-4 justify-content-evenly">
+    <div class="col-md-2 my-2" id="ggbs">
+      <img src="ggbs.jpg" class="img-fluid">
+      <div class="text-dark text-center" style="font-size: 30px;">Ggbs</div>
+  </div>
+  <div class="col-md-3 my-2" id="calcium">
+      <img src="cac.jpg" class="img-fluid">
+      <div class="text-dark text-center" style="font-size: 30px;">Calcium</div>
+  </div>
+  <div class="col-md-3 my-2" id="wood">
+      <img src="wood.jpg" class="img-fluid">
+      <div class="text-dark text-center" style="font-size: 30px;">Wood</div>
+  </div>
+  </div>
+</div>
+ <div class="container-fluid">
+  <div class="row my-4 justify-content-evenly">
+    <div class="col-md-3 my-2">
+    <img src="zinc2.jpg" class="img-fluid" id="zinc">
+    <div class="text-dark text-center" style="font-size: 30px;">Zinc</div>
+   </div>
+    <div class="col-md-3 my-2">
+    <img src="sili.jpg" class="img-fluid" id="sili">
+    <div class="text-dark text-center" style="font-size: 30px;">Silicon</div>
+   </div>
+    <div class="col-md-3 my-5">
+    <img src="ore1.jpg" class="img-fluid" id="ore">
+    <div class="text-dark text-center" style="font-size: 30px;">Ore</div>
+   </div>
+  </div>
+</div>
+ <div class="container-fluid">
+  <div class="row my-4 justify-content-evenly">
+    <div class="col-md-2 my-2">
+    <img src="man.jpg" class="img-fluid" id="magnese">
+    <div class="text-dark text-center" style="font-size: 30px;">Magnese</div>
+   </div>
+    <div class="col-md-2 my-2">
+    <img src="color.jpg" class="img-fluid" id="color">
+    <div class="text-dark text-center" style="font-size: 30px;">Colors</div>
+   </div>
+    <div class="col-md-2 my-2">
+    <img src="gold.jpg" class="img-fluid" id="gold">
+    <div class="text-dark text-center" style="font-size: 30px;">Gold</div>
+   </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row my-5">
+    <div class="col-md-12">
+      <h1 class="text-center">News</h1>
+      <p class="text-center">News of industry</p>
+    </div>
+  </div>
+  <!--fourth-->
+  <div class="container-fluid">
+  <div class="row my-5 justify-content-evenly">
+    <div class="col-md-5">
+     <h1>Global steel consumption in 2020 reach to 1.772 billion tons</h1>
+     <p>The World Steel Association’s recently released “World Steel Statistics for 2021” shows that the global crude steel output in 2020 is 1.878 billion tons, an increase</p>
+    </div>
+    <div class="col-md-5">
+      <img src="steel.jpg" class="img-fluid">
+    </div>
+  </div>
+</div>
+</div>
+<!--third-->
+  <div class="container-fluid">
+  <div class="row justify-content-evenly" style="margin-top: 200px;">
+    <div class="col-md-5">
+      <img src="bigger.jpg" class="img-fluid">
+  </div>
+  <div class="col-md-5">
+     <h1>INDUSTRIAL LIMITED</h1>
+     <p>ZHONG PU INDUSTRIAL LIMITED located in China has more than 20 years of export experience. We have been exporting ferroalloy and refractory materials used for steelmaking and casting. ZHONG PU have established many lasting partnerships around the world. Our main products include: ferrosilicon alloy, silicon metal, high carbon silicon, silicon calcium alloy, silicon barium alloy, rare earth ferro silicon magnesium, ferrosilicon manganese alloy, composite alloy cored wire , silicon carbide, graphite products</p>
+  </div>
+</div>
+</div>
+<!--fourth-->
+  <div class="container-fluid">
+    <div class="row bg-dark text-light my-5 justify-content-evenly">
+      <div class="col-md-2 my-2">
+      <h4>Industrial lmt.</h4>
+    <p style="font-size: 20px; margin-top: 30px;"><i class="bi bi-telephone-fill"></i>67899877778</p>
+   <p style="font-size: 20px;"><i class="bi bi-geo-alt-fill"></i>china</p> 
+      <p style="font-size: 20px;"><i class="bi bi-whatsapp"></i>+7889987666</p>
+    </div>
+     <div class="col-md-2 my-2">
+      <h4>Main products</h4>
+      <p><img src="zinc2.jpg" class="img-fluid my-2"style="height: 100px;"><br>Silicon</p>
+      <p><img src="bigger.jpg" class="img-fluid my-2"style="height: 100px;"><br>Alloys</p>
+      <p><img src="silicon.jpg" class="img-fluid my-2"style="height: 100px;"><br>Maganese</p>
+    </div>
+     <div class="col-md-2 my-2">
+     <h4>Links</h4>
+     <li style="list-style-type: none; font-size: 30px;"><a href="contact.html" class="text-light">contact</a></li>
+     <li style="list-style-type: none; font-size: 30px;"><a href="gallery.html" class="text-light">gallery</a></li>
+    </div>
+     <div class="col-md-2 my-2">
+    <h4>Quick message</h4>
+    <form action="/add-product" method="POST"  id="problem">
+    <div class="row">
+  <div class="col-md-12 my-3">
+    <input type="text" class="form-control" placeholder="name" aria-label="name" name="name">
+  </div>
+  <div class="col-md-12">
+    <input type="text" class="form-control" placeholder="Intrested products" aria-label="name" name="products">
+  </div>
+  <div class="col-md-6 my-4">
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+</form>
+</div>
+    </div>
+  </div>
+</div>
+<!--last-->
+<div class="container-fluid" style="margin-top: -50px;">
+  <div class="row  bg-dark text-light">
+    <div class="col-md-10">
+     <h3>Copyright ©Industrial ltd. All Rights Reserved.</h3>
+    </div>
+    <div class="col-md-1">
+      <h3>China</h3>
+    </div>
+  </div>
+  
+  <script>
+  document.getElementById('problem').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const formData = new FormData(form);
+  const formObject = {};
+
+  formData.forEach((value, key) => {
+    formObject[key] = value;
+  });
+
+  try {
+    const response = await fetch('/add-product', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formObject),
+    });
+
+    if (response.ok) {
+      form.reset(); // Clear the form fields
+      alert('Form submitted successfully');
+    } else {
+      alert('Error submitting form');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error submitting form');
+  }
+});
+//second
+document.getElementById('inquiry').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const formData = new FormData(form);
+  const formObject = {};
+
+  formData.forEach((value, key) => {
+    formObject[key] = value;
+  });
+
+  try {
+    const response = await fetch('/query-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formObject),
+    });
+
+    if (response.ok) {
+      form.reset(); // Clear the form fields
+      alert('Form submitted successfully');
+    } else {
+      alert('Error submitting form');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error submitting form');
+  }
+});
+document.addEventListener('DOMContentLoaded', function() {
+  // Add click event listener to the search button
+  document.getElementById('searchButton').addEventListener('click', function() {
+    // Get the search value, convert it to lowercase, and trim any extra whitespace
+    let searchValue = document.querySelector('.form-control').value.toLowerCase().trim();
+
+    // Select all image containers (adjust selectors as per your HTML structure)
+    let images = document.querySelectorAll('.col-md-3, .col-md-2');
+
+    // Flag to track if any image was found
+    let found = false;
+
+    // Loop through each image container
+    images.forEach(function(image) {
+      // Get the text content inside the image container, convert it to lowercase, and trim it
+      let imageText = image.querySelector('div');
+      if (imageText) {
+        let imageName = imageText.textContent.trim().toLowerCase();
+
+        // Check if the image name matches the search value and search value is not empty
+        if (imageName === searchValue && searchValue !== "") {
+          // Add a class to highlight the matched text
+          imageText.classList.add('highlighted-text');
+
+          // Scroll the image container into view smoothly and center it
+          image.scrollIntoView({ behavior: "smooth", block: "center" });
+          
+          // Set found to true since we found a match
+          found = true;
+
+          // Remove the highlight after 30 seconds
+          setTimeout(function() {
+            imageText.classList.remove('highlighted-text');
+          }, 30000);
+        } else {
+          // Remove highlight if the image does not match the search value
+          imageText.classList.remove('highlighted-text');
+        }
+      }
+    });
+
+    // If no image was found, show a prompt to the user
+    if (!found) {
+      let userResponse = confirm("We don't have that product yet, but we will inform you when it arrives in our store. Would you like to provide your email?");
+      
+      if (userResponse) {
+        let userEmail;
+        let productName;
+        while (true) {
+          userEmail = prompt("Please enter your email:");
+          if (userEmail) {
+            if (userEmail.endsWith('@gmail.com')) {
+              console.log("User's email:", userEmail);
+              productName = prompt("Please enter the product name you're interested in:");
+              if (productName) {
+                console.log("Product name:", productName);
+                alert("Thank you! We will inform you when the product is available.");
+
+                // Send the email and product name to the server
+                fetch('/submit-email', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({ email: userEmail, product: productName })
+                })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error(error));
+
+                break;
+              } else {
+                alert("You must enter a product name.");
+              }
+            } else {
+              alert("Please enter a valid Gmail address.");
+            }
+          } else {
+            alert("You must enter an email address.");
+          }
+        }
+      }
+    }
+  });
+});
+    var dropdownItems = document.querySelectorAll('.dropdown-item');
+
+// Add click event to each item
+dropdownItems.forEach(function(item) {
+  item.addEventListener('click', function() {
+    // Show the modal when a dropdown item is clicked
+    var myModal = new bootstrap.Modal(document.getElementById('formModal'));
+    myModal.show();
+  });
+});
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

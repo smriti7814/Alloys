@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+  <style>
+    #size {
+      font-size: 20px;
+    }
+    .dropdown-menu {
+      margin-left: 200px !important;
+      background-color: #198754 !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="img2.png" class="img-fluid" height="150" width="150">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-success mx-4" aria-current="page" href="#" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px;">Products</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li><button class="dropdown-item" type="button">Aluminium Alloys</button></li>
+                <li><button class="dropdown-item" type="button">Ores and Minerals</button></li>
+                <li><button class="dropdown-item" type="button">Gypsum</button></li>
+                <li><button class="dropdown-item" type="button">Magnesium Metal</button></li>
+                <li><button class="dropdown-item" type="button">Manganese</button></li>
+                <li><button class="dropdown-item" type="button">Zinc Ingots</button></li>
+                <li><button class="dropdown-item" type="button">Zinc Metal powder</button></li>
+                <li><button class="dropdown-item" type="button">Refractory Materials</button></li>
+                <li><button class="dropdown-item" type="button">GGBS</button></li>
+                <li><button class="dropdown-item" type="button">Unbleached Woodpulp</button></li>
+                <li><button class="dropdown-item" type="button">Calcined Bauxite</button></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success mx-4" href="project.html" id="size">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success mx-4" href="contact.html" id="size">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success mx-4" href="gallery.html" id="size">Gallery</a>
+            </li>
+          </ul>
+          <form class="d-flex my-4">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button" id="searchButton">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Modal for Form -->
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Product Inquiry Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/query-form" method="POST" id="inquiry">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="product" class="form-label">Product</label>
+              <input type="text" class="form-control" id="product" name="product" required>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-success text-center" style="margin-top: 150px;">Gallery of some products</h1>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="ore.png" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <img src="zinc2.jpg" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+          <img src="manganese.jpg" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-success text-center">Plants and Workshop</h1>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row my-5">
+          <div class="col-md-3 my-2">
+            <img src="plant1.jpg" class="img-fluid">
+          </div>
+          <div class="col-md-3 my-2">
+            <img src="plant2.jpg" class="img-fluid">
+          </div>
+          <div class="col-md-3 my-2">
+            <img src="plant3.jpg" class="img-fluid">
+          </div>
+          <div class="col-md-3 my-2">
+            <img src="plant6.jpg" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row my-5">
+            <div class="col-md-3 my-2">
+              <img src="plant7.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-3 my-2">
+              <img src="plant8.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-3 my-2">
+              <img src="plant9.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-3 my-2">
+              <img src="plant10.jpg" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row my-5">
+              <div class="col-md-3 my-2">
+                <img src="plant11.jpg" class="img-fluid">
+              </div>
+              <div class="col-md-3 my-2">
+                <img src="plant12.jpg" class="img-fluid">
+              </div>
+              <div class="col-md-3 my-2">
+                <img src="plant13.jpg" class="img-fluid">
+              </div>
+              <div class="col-md-3 my-2">
+                <img src="plant14.jpg" class="img-fluid">
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="row bg-dark text-light my-5 justify-content-evenly">
+                <div class="col-md-2 my-2">
+                <h4>Industrial lmt.</h4>
+              <p style="font-size: 20px; margin-top: 30px;"><i class="bi bi-telephone-fill"></i>67899877778</p>
+             <p style="font-size: 20px;"><i class="bi bi-geo-alt-fill"></i>china</p> 
+                <p style="font-size: 20px;"><i class="bi bi-whatsapp"></i>+7889987666</p>
+              </div>
+               <div class="col-md-2 my-2">
+                <h4>Main products</h4>
+                <p><img src="zinc2.jpg" class="img-fluid my-2"style="height: 100px;"><br>Silicon</p>
+                <p><img src="bigger.jpg" class="img-fluid my-2"style="height: 100px;"><br>Alloys</p>
+                <p><img src="silicon.jpg" class="img-fluid my-2"style="height: 100px;"><br>Maganese</p>
+              </div>
+               <div class="col-md-2 my-2">
+               <h4>Links</h4>
+               <li style="list-style-type: none; font-size: 30px;"><a href="contact.html" class="text-light">contact</a></li>
+               <li style="list-style-type: none; font-size: 30px;"><a href="gallery.html" class="text-light">gallery</a></li>
+              </div>
+               <div class="col-md-2 my-2">
+              <h4>Quick message</h4>
+              <form action="/add-product" method="POST"  id="problem">
+              <div class="row">
+            <div class="col-md-12 my-3">
+              <input type="text" class="form-control" placeholder="name" aria-label="name" name="name">
+            </div>
+            <div class="col-md-12">
+              <input type="text" class="form-control" placeholder="Intrested products" aria-label="name" name="products">
+            </div>
+            <div class="col-md-6 my-4">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </form>
+          </div>
+              </div>
+            </div>
+          </div>
+          <!--last-->
+          <div class="container-fluid" style="margin-top: -50px;">
+            <div class="row  bg-dark text-light">
+              <div class="col-md-10">
+               <h3>Copyright ©Industrial ltd. All Rights Reserved.</h3>
+              </div>
+              <div class="col-md-1">
+                <h3>China</h3>
+              </div>
+            </div>
+            
+      
+      <!-- Scripts -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var dropdownItems = document.querySelectorAll('.dropdown-item');
+          dropdownItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+              // Show the modal when a dropdown item is clicked
+              var myModal = new bootstrap.Modal(document.getElementById('formModal'));
+              myModal.show();
+            });
+          });
+
+          document.getElementById('inquiry').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const formObject = {};
+        
+            formData.forEach((value, key) => {
+              formObject[key] = value;
+            });
+        
+            try {
+              const response = await fetch('/query-form', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formObject),
+              });
+        
+              if (response.ok) {
+                form.reset(); // Clear the form fields
+                alert('Form submitted successfully');
+              } else {
+                alert('Error submitting form');
+              }
+            } catch (error) {
+              console.error('Error:', error);
+              alert('Error submitting form');
+            }
+          });
+        });
+        //second
+        document.getElementById('problem').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const formData = new FormData(form);
+  const formObject = {};
+
+  formData.forEach((value, key) => {
+    formObject[key] = value;
+  });
+
+  try {
+    const response = await fetch('/add-product', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formObject),
+    });
+
+    if (response.ok) {
+      form.reset(); // Clear the form fields
+      alert('Form submitted successfully');
+    } else {
+      alert('Error submitting form');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error submitting form');
+  }
+});
+      </script>
+  </body>
+</html>
